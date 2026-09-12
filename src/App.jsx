@@ -1,17 +1,23 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+import { useEffect, useState } from 'react'
+import {Link} from 'react-router';
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <h1>Hello World!!</h1>
-    </>
-  )
-}
+    <div>
+      <h1>Hello from the main page of the app!</h1>
+      <p>Here are some examples of links to other pages</p>
+      <nav>
+        <ul>
+          <li>
+            <Link to="about">About</Link>
+            <Link to="profile/james">Profile</Link>
+            <Link to="dashboard">Dashboard</Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
+};
 
-export default App
+export default App;
